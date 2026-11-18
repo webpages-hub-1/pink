@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Ahmed &amp; Rana — Wedding Invitation 💍</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Great+Vibes&family=Amiri:wght@400;700&family=Aref+Ruqaa:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#FBEBDD;      /* background of the main image */
+  --blush:#FDEBF1;
+  --lav-soft:#FADDE8;
+  --lav:#F2A9C0;        /* light pink accent */
+  --plum:#A5566F;       /* text colour (dusty rose) */
+  --plum-deep:#5C3043;
+  --gold:#C9A96A;       /* golden leaves */
+  --script:'Great Vibes','Snell Roundhand',cursive;
+  --serif:'Cormorant Garamond',Georgia,serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--plum);font-family:var(--serif);line-height:1.6;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+.script{font-family:var(--script);font-weight:400;color:var(--plum)}
+.caps{text-transform:uppercase;letter-spacing:.28em;font-size:.82rem}
+.divider{display:flex;align-items:center;justify-content:center;gap:12px;margin:18px auto;width:min(260px,70%)}
+.divider::before,.divider::after{content:"";flex:1;height:1px;background:linear-gradient(90deg,transparent,var(--lav))}
+.divider::after{transform:scaleX(-1)}
+.divider i{width:8px;height:8px;background:var(--lav);transform:rotate(45deg);border-radius:2px 60% 2px 60%}
+section{position:relative}
+
+/* ---------- 1. HERO (your flowers image + live text) ---------- */
+.hero{height:100vh;height:100svh;min-height:600px;background:var(--cream);overflow:hidden}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center}
+.hero-text{position:absolute;inset:0;z-index:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:0 16%}
+.h-eyebrow{color:var(--plum);font-size:clamp(.66rem,2.9vw,.85rem);letter-spacing:.32em}
+.h-names{font-size:clamp(2.7rem,13.5vw,4.4rem);line-height:1.02;margin:clamp(14px,3.5vh,30px) 0 clamp(6px,2vh,18px)}
+.h-names .amp{display:block;font-size:.62em;line-height:1.1}
+.hero-text .divider{width:min(230px,68%);margin:clamp(10px,2.2vh,20px) auto}
+.h-date{font-size:clamp(1.05rem,4.8vw,1.45rem);letter-spacing:.22em;color:var(--plum);margin-top:6px}
+.h-venue{font-size:clamp(1.15rem,5.2vw,1.6rem);letter-spacing:.1em;font-weight:500;color:var(--plum);margin-top:clamp(10px,2.4vh,22px)}
+.h-note{font-size:clamp(.62rem,2.6vw,.78rem);letter-spacing:.24em;line-height:1.9;max-width:300px;margin-top:clamp(14px,3.4vh,30px);color:var(--plum)}
+html[lang=ar] .h-names{line-height:1.5}
+html[lang=ar] .h-eyebrow,html[lang=ar] .h-note{font-size:.9rem}
+html[lang=ar] .h-note{line-height:1.8}
+.scroll-hint{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);z-index:2;color:var(--plum);animation:bob 2s ease-in-out infinite}
+@keyframes bob{50%{transform:translate(-50%,8px)}}
+
+/* ---------- 2. COUNTDOWN ---------- */
+.count{padding:56px 22px 20px;background:linear-gradient(180deg,var(--lav-soft) 0%,#FCE6EE 35%,var(--blush) 100%);text-align:center}
+.frame{position:relative;max-width:320px;margin:24px auto 0;padding:34px 14px 30px}
+.frame svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.frame .shape{fill:rgba(242,169,192,.16);stroke:var(--lav);stroke-width:1.4;vector-effect:non-scaling-stroke}
+.frame .inner{position:relative}
+.frame h2{font-size:2.4rem;line-height:1.1}
+.frame .date{margin-top:4px;color:var(--plum);opacity:.8}
+.boxes{display:flex;justify-content:center;gap:clamp(14px,5vw,28px);margin-top:20px}
+.box b{display:block;font-family:var(--script);font-size:1.9rem;font-weight:400;line-height:1}
+.box span{display:block;margin-top:8px;font-size:.62rem;letter-spacing:.3em;text-transform:uppercase;opacity:.75}
+.sticker{display:flex;justify-content:center;padding:6px 22px}
+.sticker img{width:100%;max-width:420px}
+.s-zena{background:var(--blush);padding-bottom:44px}
+.s-heta img{max-width:180px}
+.s-heta{background:var(--cream)}
+
+/* ---------- 3. DETAILS ---------- */
+.details{padding:64px 22px 70px;background:linear-gradient(180deg,var(--blush),var(--cream));text-align:center}
+.details h2{font-size:3rem;line-height:1.1}
+.details .sub{margin-top:6px;opacity:.85}
+.card{max-width:440px;margin:34px auto 0;background:#FFF8F1;border:1px solid var(--gold);border-radius:20px;overflow:hidden;box-shadow:0 18px 40px rgba(165,86,111,.12)}
+.venue-img{height:230px;background:var(--lav-soft)}
+.venue-img img{width:100%;height:100%;object-fit:cover}
+.rows{padding:22px 18px 24px;display:grid;gap:12px}
+.row{display:flex;align-items:center;gap:16px;text-align:start;background:rgba(242,169,192,.1);border-radius:14px;padding:14px 16px}
+.row .ic{flex:none;width:44px;height:44px;border-radius:50%;background:#FFF8F1;display:grid;place-items:center;color:var(--lav)}
+.row small{display:block;font-size:.78rem;opacity:.7;letter-spacing:.12em}
+.row p{font-size:1.15rem;font-weight:500;line-height:1.35}
+
+/* ---------- 4. MAP ---------- */
+.map{padding:70px 22px;background:linear-gradient(180deg,var(--cream),var(--blush));text-align:center;color:var(--plum)}
+.map h2{font-family:var(--serif);font-weight:500;font-size:clamp(1.8rem,8vw,2.6rem);letter-spacing:.06em;font-variant:small-caps;color:var(--plum)}
+.map .sub{font-style:italic;color:var(--plum);opacity:.85;margin-top:6px}
+.mapcard{max-width:320px;margin:26px auto 0;padding:10px;border:1px solid var(--gold);border-radius:22px;background:#FFF8F1;box-shadow:0 18px 40px rgba(165,86,111,.12)}
+.mapcard iframe{width:100%;height:190px;border:0;border-radius:14px;display:block;background:var(--lav-soft)}
+.btn-map{display:flex;align-items:center;justify-content:center;gap:10px;margin-top:10px;padding:12px;border-radius:999px;background:var(--lav);color:var(--plum-deep);text-decoration:none;font-weight:600;letter-spacing:.16em;text-transform:uppercase;font-size:.8rem}
+.btn-map:focus-visible,.btn-map:hover{background:var(--plum);color:#fff}
+
+/* ---------- 5. RSVP ---------- */
+.rsvp{padding:64px 26px 70px;background:linear-gradient(180deg,var(--blush) 0%,var(--blush) 12%,var(--lav-soft) 100%);text-align:center}
+.swan{width:125px;margin:0 auto 22px}
+.rsvp h2{font-size:2.3rem;letter-spacing:.2em}
+.rsvp .by{margin-top:6px;opacity:.85}
+form{max-width:420px;margin:34px auto 0;text-align:start}
+label,.q{display:block;margin-top:24px;font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600}
+input[type=text],textarea{width:100%;margin-top:4px;padding:10px 2px;background:transparent;border:0;border-bottom:1px solid var(--lav);font:inherit;font-size:1.15rem;color:var(--plum-deep);outline:0;resize:none}
+input::placeholder,textarea::placeholder{color:var(--plum);opacity:.5}
+input:focus,textarea:focus{border-bottom-color:var(--plum)}
+.choices{display:flex;gap:10px;margin-top:10px}
+.choices label{flex:1;margin:0;text-transform:none;letter-spacing:0;font-size:1.05rem;font-weight:500}
+.choices input{position:absolute;opacity:0}
+.choices span{display:block;text-align:center;padding:11px 6px;border:1px solid var(--lav);border-radius:999px;cursor:pointer;transition:.2s}
+.choices input:checked+span{background:var(--lav);color:var(--plum-deep);border-color:var(--lav)}
+.choices input:focus-visible+span{outline:2px solid var(--plum);outline-offset:2px}
+.send{width:100%;margin-top:34px;padding:16px;border:0;border-radius:999px;background:var(--lav);color:var(--plum-deep);font:inherit;font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:.9rem;cursor:pointer;display:flex;gap:10px;align-items:center;justify-content:center}
+.send:hover,.send:focus-visible{background:var(--plum);color:#fff}
+.err{margin-top:10px;color:#a3365a;font-size:.95rem;min-height:1.2em}
+
+/* ---------- 6. FOOTER ---------- */
+footer{position:relative;padding:36px 22px 0;text-align:center;background:linear-gradient(180deg,var(--lav-soft) 0%,var(--cream) 55%);overflow:hidden}
+footer>*{position:relative}
+footer .names{font-size:2.1rem;line-height:1.15}
+footer .when{margin-top:6px;letter-spacing:.3em;font-size:.9rem}
+footer .where{font-size:1.4rem;margin-top:6px;font-weight:500}
+footer .thanks{margin-top:22px;font-style:italic;opacity:.85}
+.foot-sticker{margin-top:18px;display:flex;justify-content:center}
+.foot-sticker img{width:100%;max-width:300px;display:block}
+footer .heart{color:var(--lav);line-height:0;margin-bottom:10px}
+footer .heart svg{display:inline-block}
+
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .9s ease,transform .9s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}.scroll-hint{animation:none}html{scroll-behavior:auto}}
+
+/* ---------- 0. COVER GATE (image -> video -> invitation) ---------- */
+html.gate-lock,html.gate-lock body{overflow:hidden;height:100%}
+#gate{position:fixed;inset:0;z-index:9999;background:#000;overflow:hidden}
+#gate.gone{display:none}
+#gateCover{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;cursor:pointer;-webkit-tap-highlight-color:transparent}
+#gateVideo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:transparent;pointer-events:none;z-index:1}
+#gateCover{z-index:2}
+#gate.playing #gateCover{visibility:hidden}
+#gateFlash{z-index:3}
+#gateFlash{position:absolute;inset:0;background:#fff;opacity:0;pointer-events:none;transition:opacity .55s ease}
+#gateFlash.on{opacity:1}
+
+
+/* ---------- LANGUAGE SWITCH (floating pill) ---------- */
+.lang{position:fixed;top:calc(env(safe-area-inset-top,0px) + 10px);right:calc(env(safe-area-inset-right,0px) + 10px);left:auto;z-index:9000;direction:ltr;
+  display:grid;grid-template-columns:1fr 1fr;padding:3px;border-radius:999px;background:rgba(92,48,67,.45);
+  -webkit-backdrop-filter:blur(14px) saturate(1.2);backdrop-filter:blur(14px) saturate(1.2);
+  border:1px solid rgba(255,255,255,.18);box-shadow:0 6px 16px rgba(92,48,67,.25);
+  animation:floaty 4.2s ease-in-out infinite;-webkit-tap-highlight-color:transparent;user-select:none}
+@keyframes floaty{50%{transform:translateY(4px)}}
+.lang .thumb{position:absolute;top:3px;bottom:3px;left:3px;width:calc(50% - 3px);border-radius:999px;background:#FBEBDD;
+  box-shadow:0 2px 6px rgba(0,0,0,.18);transition:transform .45s cubic-bezier(.5,1.4,.5,1)}
+.lang[data-active=ar] .thumb{transform:translateX(100%)}
+.lang button{position:relative;z-index:1;min-width:38px;padding:5px 10px;border:0;background:none;cursor:pointer;
+  font-size:.78rem;line-height:1.2;color:#FBEBDD;transition:color .3s;font-family:'Cormorant Garamond','Amiri',serif;font-weight:600;letter-spacing:.04em}
+.lang button.ar{font-family:'Amiri',serif;font-weight:700;font-size:.85rem;letter-spacing:0}
+.lang button.on{color:var(--plum-deep)}
+.lang button:focus-visible{outline:2px solid #fff;outline-offset:2px;border-radius:999px}
+
+/* ---------- ARABIC (RTL) VERSION ---------- */
+html[lang=ar]{--script:'Aref Ruqaa','Amiri',serif;--serif:'Amiri','Cormorant Garamond',serif}
+html[lang=ar] body{line-height:1.8}
+html[lang=ar] *{letter-spacing:0!important;text-transform:none!important;font-variant:normal!important}
+html[lang=ar] .script{line-height:1.45!important;font-weight:700}
+html[lang=ar] .caps{font-size:1rem}
+html[lang=ar] .box span{font-size:.85rem}
+html[lang=ar] .box b{font-size:1.7rem;line-height:1.3}
+html[lang=ar] .row small{font-size:.95rem}
+html[lang=ar] label,html[lang=ar] .q{font-size:.95rem}
+html[lang=ar] .btn-map,html[lang=ar] .send{font-size:1rem}
+html[lang=ar] .map h2{font-weight:700}
+@media (prefers-reduced-motion:reduce){.lang{animation:none}.lang .thumb{transition:none}}
+</style>
+</head>
+<body>
+
+<!-- 0. COVER GATE — save your files next to this page as "cover" (cover.jpg / cover.png / cover.webp) and "cover" video (cover.mp4 / cover.webm) -->
+<div id="gate" role="button" aria-label="Open invitation">
+  <img id="gateCover" alt="Tap to open the invitation" src="cover.jpg" decoding="async">
+  <video id="gateVideo" muted playsinline webkit-playsinline preload="auto">
+    <source src="cover.mov" type="video/mp4">
+    <source src="cover.jpg" type="video/webm">
+    <source src="cover.mov" type="video/quicktime">
+  </video>
+  <div id="gateFlash"></div>
+</div>
+
+<!-- Background song — save as "muu" next to this page (muu.mp3 / muu.m4a / muu.ogg / muu.wav) -->
+<audio id="bgSong" loop preload="auto" playsinline>
+  <source src="muu.mp3" type="audio/mpeg">
+  <source src="muu.m4a" type="audio/mp4">
+  <source src="muu.ogg" type="audio/ogg">
+  <source src="muu.wav" type="audio/wav">
+</audio>
+
+<!-- Language switch (floating) -->
+<div class="lang" id="lang" data-active="en" role="group" aria-label="Language / اللغة">
+  <span class="thumb" aria-hidden="true"></span>
+  <button type="button" class="en on" data-lang="en" aria-pressed="true">EN</button>
+  <button type="button" class="ar" data-lang="ar" aria-pressed="false" lang="ar">عربي</button>
+</div>
+
+<!-- 1. HERO — add your flowers-only image next to this file as "flowers.png" (full-height portrait image; the text below is written on top of it) -->
+<section class="hero">
+  <img class="hero-bg" src="flower.png" alt="" onerror="this.style.display='none'">
+  <div class="hero-text">
+    <p class="caps h-eyebrow reveal" data-i18n="hEyebrow">Our Wedding Day</p>
+    <h1 class="script h-names reveal" data-i18n="hNames">Ahmed<span class="amp">&amp;</span>Rana</h1>
+    <div class="divider"><i></i></div>
+    <p class="h-date reveal" data-i18n="hDate">01/12/2026</p>
+    <p class="h-venue reveal" data-i18n="hVenue">Marriott Mena House</p>
+    <p class="caps h-note reveal" data-i18n="hNote">Your presence will make our day even more special</p>
+    <div class="divider"><i></i></div>
+  </div>
+  <svg class="scroll-hint" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+</section>
+
+<!-- 2. COUNTDOWN -->
+<section class="count">
+  <div class="frame reveal">
+    <svg id="scallop" viewBox="0 0 300 200" preserveAspectRatio="none" aria-hidden="true"><path class="shape" id="scallopPath"/></svg>
+    <div class="inner">
+      <h2 class="script" data-i18n="count">Countdown</h2>
+      <p class="caps date" data-i18n="dateShort">December 1st, 2026</p>
+      <div class="boxes" role="timer" aria-live="off">
+        <div class="box"><b id="d">00</b><span data-i18n="days">Days</span></div>
+        <div class="box"><b id="h">00</b><span data-i18n="hours">Hours</span></div>
+        <div class="box"><b id="m">00</b><span data-i18n="mins">Minutes</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Sticker after countdown — save as "zena.png" next to this file -->
+<div class="sticker s-zena"><img src="zena.png" alt="" onerror="this.parentNode.style.display='none'"></div>
+
+<!-- 3. CELEBRATION DETAILS -->
+<section class="details">
+  <h2 class="script reveal" data-i18n="detTitle">Celebration Details</h2>
+  <p class="sub reveal" data-i18n="detSub">Everything you need to know to join our joy</p>
+  <div class="card reveal">
+    <!-- Venue photo — save as "Venue.jpg" next to this file -->
+    <div class="venue-img"><img src="Venue.png" alt="Marriott Mena House" onerror="this.style.display='none'"></div>
+    <div class="divider"><i></i></div>
+    <div class="rows">
+      <div class="row">
+        <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></div>
+        <div><small data-i18n="venue">Venue</small><p data-i18n="venueP">Marriott Mena House<br>6 Pyramids Road, Giza</p></div>
+      </div>
+      <div class="row">
+        <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3.5" y="5" width="17" height="15" rx="2.5"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg></div>
+        <div><small data-i18n="date">Date</small><p data-i18n="dateP">Tuesday, 1 December 2026</p></div>
+      </div>
+      <div class="row">
+        <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/></svg></div>
+        <div><small data-i18n="time">Time</small><p data-i18n="timeP">7:00 PM until 1:00 AM<br>Zaffa at 7:30 PM</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Sticker after details — save as "heta.png" next to this file -->
+<div class="sticker s-heta"><img src="heta.png" alt="" onerror="this.parentNode.style.display='none'"></div>
+
+<!-- 4. MAP -->
+<section class="map">
+  <h2 class="reveal" data-i18n="mapTitle">Map &amp; Directions</h2>
+  <p class="sub reveal" data-i18n="mapSub">Find your way to the celebration</p>
+  <div class="mapcard reveal">
+    <!-- To show the exact pin: Google Maps > Share > Embed a map > copy the src into this iframe -->
+    <iframe id="mapFrame" title="Venue map" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+      src="https://www.google.com/maps?q=Marriott+Mena+House+6+Pyramids+Road+Giza&output=embed"></iframe>
+    <a class="btn-map" href="https://www.google.com/maps/search/?api=1&query=Marriott+Mena+House+6+Pyramids+Road+Giza" target="_blank" rel="noopener">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+      <span data-i18n="mapBtn">Open in Maps App</span>
+    </a>
+  </div>
+</section>
+
+<!-- 5. RSVP -->
+<section class="rsvp">
+  <!-- Small sticker above RSVP — save as "swan.png" next to this file -->
+  <img class="swan" src="swan.png" alt="" onerror="this.style.display='none'">
+  <h2 class="script reveal" data-i18n="rsvp">RSVP</h2>
+  <p class="caps by reveal" data-i18n="rsvpBy">Kindly respond by November 24, 2026</p>
+  <form id="rsvpForm" class="reveal" novalidate>
+    <label for="name" data-i18n="fName">Full name *</label>
+    <input type="text" id="name" placeholder="Your full name" data-i18n-ph="fNamePh" autocomplete="name">
+
+    <span class="q" data-i18n="fQ">Will you be joining us? *</span>
+    <div class="choices">
+      <label><input type="radio" name="att" value="yes"><span data-i18n="fYes">Yes, I'll be there</span></label>
+      <label><input type="radio" name="att" value="no"><span data-i18n="fNo">Can't make it</span></label>
+    </div>
+
+    <label for="msg" data-i18n="fMsg">Message for the couple (optional)</label>
+    <textarea id="msg" rows="3" placeholder="Share your wishes for the couple" data-i18n-ph="fMsgPh"></textarea>
+
+    <p class="err" id="err" role="alert"></p>
+    <button class="send" type="submit">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M21 3L3 10.5l7 2.5 2.5 7z"/></svg>
+      <span data-i18n="send">Send confirmation</span>
+    </button>
+  </form>
+</section>
+
+<!-- 6. FOOTER -->
+<footer>
+  <div class="heart reveal" aria-hidden="true"><svg viewBox="0 0 24 22" width="22" height="20" fill="currentColor"><path d="M12 21.2 3.1 12.5C.4 9.8.4 5.6 3 3.1c2.4-2.3 6.1-2.1 8.2.4L12 4.4l.8-.9c2.1-2.5 5.8-2.7 8.2-.4 2.6 2.5 2.6 6.7-.1 9.4z"/></svg></div>
+  <p class="caps reveal" data-i18n="withLove">With love &amp; joy</p>
+  <h2 class="script names reveal" data-i18n="names">Ahmed &amp; Rana</h2>
+  <p class="when reveal" data-i18n="whenF">01 · 12 · 2026</p>
+  <!-- Sticker at the very bottom — save as "footer.png" next to this file -->
+  <div class="foot-sticker"><img src="footer.png" alt="" onerror="this.parentNode.style.display='none';this.closest('footer').style.paddingBottom='32px'"></div>
+</footer>
+
+<script>
+/* ===== Settings you may want to edit ===== */
+const WEDDING = new Date(2026, 11, 1, 19, 0, 0);   // 1 Dec 2026, 7:00 PM (local time)
+const WHATSAPP = "201128552706";                    // 01128552706 in international format
+const COUPLE = "Ahmed & Rana";
+
+/* ===== Scalloped frame (stretches to fit any size) ===== */
+(function(){
+  const W=300,H=200,n=9,m=7,r=9; let d=`M${m+r},${m}`;
+  const sx=(W-2*m-2*r)/n, sy=(H-2*m-2*r)/6;
+  for(let i=0;i<n;i++) d+=` q${sx/2},${-r*1.6} ${sx},0`;
+  d+=` q${r*1.6},${r*0.4} ${r},${r}`;
+  for(let i=0;i<6;i++) d+=` q${r*1.6},${sy/2} 0,${sy}`;
+  d+=` q${-r*0.4},${r*1.6} ${-r},${r}`;
+  for(let i=0;i<n;i++) d+=` q${-sx/2},${r*1.6} ${-sx},0`;
+  d+=` q${-r*1.6},${-r*0.4} ${-r},${-r}`;
+  for(let i=0;i<6;i++) d+=` q${-r*1.6},${-sy/2} 0,${-sy}`;
+  d+=` q${r*0.4},${-r*1.6} ${r},${-r}z`;
+  document.getElementById('scallopPath').setAttribute('d',d);
+})();
+
+/* ===== Countdown ===== */
+const pad=n=>String(n).padStart(2,'0');
+let LANG='en';
+const num=t=>LANG==='ar'?String(t).replace(/\d/g,c=>'٠١٢٣٤٥٦٧٨٩'[c]):String(t);
+function tick(){
+  let diff=Math.max(0,WEDDING-new Date());
+  const days=Math.floor(diff/864e5); diff%=864e5;
+  const hrs=Math.floor(diff/36e5); diff%=36e5;
+  d.textContent=num(pad(days)); h.textContent=num(pad(hrs)); m.textContent=num(pad(Math.floor(diff/6e4)));
+}
+tick(); setInterval(tick,15000);
+
+/* ===== RSVP -> WhatsApp ===== */
+document.getElementById('rsvpForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  const name=document.getElementById('name').value.trim();
+  const att=document.querySelector('input[name=att]:checked');
+  const note=document.getElementById('msg').value.trim();
+  const err=document.getElementById('err');
+  if(!name||!att){err.textContent=LANG==='ar'?'من فضلك اكتب اسمك بالكامل واختر هل ستحضر أم لا.':'Please add your full name and choose if you can join us.';return;}
+  err.textContent='';
+  const ar=LANG==='ar';
+  const lines=ar?[
+    `💗 *تأكيد حضور الزفاف — أحمد ورنا*`,
+    ``,
+    `👤 *الاسم:* ${name}`,
+    `✅ *الحضور:* ${att.value==='yes'?'نعم، سأحضر':'للأسف لا أستطيع الحضور'}`
+  ]:[
+    `💗 *Wedding RSVP — ${COUPLE}*`,
+    ``,
+    `👤 *Name:* ${name}`,
+    `✅ *Attendance:* ${att.value==='yes'?"Yes, I'll be there":"Sorry, can't make it"}`
+  ];
+  if(note) lines.push(``,ar?`💌 *الرسالة:*`:`💌 *Message:*`,note);
+  lines.push(``,ar?`📅 ١/١٢/٢٠٢٦ · ماريوت مينا هاوس`:`📅 01/12/2026 · Marriott Mena House`);
+  window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(lines.join('\n'))}`,'_blank');
+});
+
+
+/* ===== English / Arabic ===== */
+(function(){
+  const AR={
+    count:'العد التنازلي', dateShort:'١ ديسمبر ٢٠٢٦',
+    days:'يوم', hours:'ساعة', mins:'دقيقة',
+    detTitle:'تفاصيل الاحتفال', detSub:'كل ما تحتاجون معرفته لمشاركتنا فرحتنا',
+    venue:'المكان', venueP:'ماريوت مينا هاوس<br>٦ شارع الهرم، الجيزة',
+    date:'التاريخ', dateP:'الثلاثاء، ١ ديسمبر ٢٠٢٦',
+    time:'الميعاد', timeP:'من ٧:٠٠ مساءً حتى ١:٠٠ صباحًا<br>الزفة الساعة ٧:٣٠ مساءً',
+    mapTitle:'الموقع والاتجاهات', mapSub:'اعرفوا طريقكم إلى الاحتفال', mapBtn:'افتح في تطبيق الخرائط',
+    rsvp:'تأكيد الحضور', rsvpBy:'برجاء الرد قبل ٢٤ نوفمبر ٢٠٢٦',
+    fName:'الاسم بالكامل *', fNamePh:'اكتب اسمك بالكامل',
+    fQ:'هل ستشاركوننا فرحتنا؟ *', fYes:'نعم، سأحضر', fNo:'للأسف لا أستطيع',
+    fMsg:'رسالة للعروسين (اختياري)', fMsgPh:'شاركونا أمنياتكم للعروسين',
+    send:'إرسال التأكيد', withLove:'بكل حب وفرح', names:'أحمد ورنا', whenF:'١ · ١٢ · ٢٠٢٦',
+    hEyebrow:'يوم زفافنا', hNames:'أحمد<span class="amp">و</span>رنا', hDate:'١/١٢/٢٠٢٦', hVenue:'ماريوت مينا هاوس', hNote:'حضوركم سيجعل يومنا أجمل'
+  };
+  const root=document.documentElement;
+  const sw=document.getElementById('lang');
+  const map=document.getElementById('mapFrame');
+  const titleEN=document.title, titleAR='دعوة زفاف أحمد ورنا';
+  const mapBase=map.getAttribute('src');
+
+  // remember the original English text
+  document.querySelectorAll('[data-i18n]').forEach(el=>el.dataset.en=el.innerHTML);
+  document.querySelectorAll('[data-i18n-ph]').forEach(el=>el.dataset.en=el.getAttribute('placeholder'));
+
+  function apply(l,save){
+    LANG=l;
+    root.lang=l; root.dir=l==='ar'?'rtl':'ltr';
+    document.querySelectorAll('[data-i18n]').forEach(el=>{ el.innerHTML=l==='ar'?AR[el.dataset.i18n]:el.dataset.en; });
+    document.querySelectorAll('[data-i18n-ph]').forEach(el=>el.setAttribute('placeholder',l==='ar'?AR[el.dataset.i18nPh]:el.dataset.en));
+    document.title=l==='ar'?titleAR:titleEN;
+    const want=mapBase+(l==='ar'?'&hl=ar':'');
+    if(map.getAttribute('src')!==want) map.setAttribute('src',want);
+    sw.dataset.active=l;
+    sw.querySelectorAll('button').forEach(b=>{ const on=b.dataset.lang===l; b.classList.toggle('on',on); b.setAttribute('aria-pressed',on); });
+    document.getElementById('err').textContent='';
+    tick();
+    if(save){ try{localStorage.setItem('inviteLang',l);}catch(e){} }
+  }
+  sw.querySelectorAll('button').forEach(b=>b.addEventListener('click',()=>{ if(b.dataset.lang!==LANG) apply(b.dataset.lang,true); }));
+
+  // first visit = English. Afterwards remembers the guest's choice. ?lang=ar opens Arabic directly.
+  let start='en';
+  try{
+    const q=new URLSearchParams(location.search).get('lang');
+    const saved=localStorage.getItem('inviteLang');
+    if(q==='ar'||q==='en') start=q; else if(saved==='ar'||saved==='en') start=saved;
+  }catch(e){}
+  if(start!=='en') apply(start,false);
+})();
+
+/* ===== Reveal on scroll ===== */
+const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.15});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+/* ===== Cover gate: image -> tap -> video -> white flash -> invitation ===== */
+(function(){
+  const root=document.documentElement;
+  const gate=document.getElementById('gate');
+  const img=document.getElementById('gateCover');
+  const vid=document.getElementById('gateVideo');
+  const flash=document.getElementById('gateFlash');
+  const song=document.getElementById('bgSong');
+  vid.muted=true; vid.defaultMuted=true; vid.volume=0;   // video never has sound
+  root.classList.add('gate-lock');
+  if('scrollRestoration' in history) history.scrollRestoration='manual';
+  window.scrollTo(0,0);
+
+  // cover image: try common extensions until one loads
+  const exts=['jpg','jpeg','png','webp'];
+  let ei=0;
+  img.addEventListener('error',()=>{ if(++ei<exts.length) img.src='cover.'+exts[ei]; });
+
+  // the video's own poster is the cover image -> if the video needs a moment, it still shows the same picture (never black)
+  function setPoster(){ const u=img.currentSrc||img.src; if(u) vid.setAttribute('poster',u); }
+  if(img.complete&&img.naturalWidth) setPoster();
+  img.addEventListener('load',setPoster);
+  try{ vid.load(); }catch(e){}   // start buffering the video while the cover is shown
+
+  let started=false, finished=false;
+  function enter(){
+    if(finished) return; finished=true;
+    flash.classList.add('on');                       // quick soft white flash
+    setTimeout(()=>{
+      gate.classList.add('gone');
+      root.classList.remove('gate-lock');
+      window.scrollTo(0,0);
+      flash.classList.remove('on');
+      try{vid.pause();vid.removeAttribute('src');vid.load();}catch(e){}
+    },600);
+  }
+  function start(){
+    if(started) return; started=true;
+    // Song starts inside the very first tap (required by iPhone / Safari / all browsers)
+    try{ song.volume=1; const sp=song.play(); if(sp&&sp.catch) sp.catch(()=>{}); }catch(e){}
+    vid.addEventListener('ended',enter,{once:true});
+    vid.addEventListener('error',enter,{once:true});
+    vid.querySelectorAll('source').forEach(s=>s.addEventListener('error',()=>{
+      // all sources failed -> go straight to the invitation
+      if(s===vid.querySelector('source:last-of-type')) enter();
+    }));
+    // swap picture -> video only once the first video frame is actually painted (no black / white gap)
+    let swapped=false;
+    const swap=()=>{ if(swapped) return; swapped=true; gate.classList.add('playing'); };
+    if(vid.requestVideoFrameCallback) vid.requestVideoFrameCallback(()=>requestAnimationFrame(swap));
+    vid.addEventListener('timeupdate',function tu(){ if(vid.currentTime>0.04){ vid.removeEventListener('timeupdate',tu); requestAnimationFrame(swap); } });
+    setTimeout(swap,2500);   // safety
+    const p=vid.play();
+    if(p&&p.catch) p.catch(()=>{ vid.play().catch(enter); });
+  }
+  gate.addEventListener('click',start);
+  document.addEventListener('visibilitychange',()=>{
+    if(!started) return;
+    if(document.hidden) song.pause(); else song.play().catch(()=>{});
+  });
+})();
+</script>
+</body>
+</html>
